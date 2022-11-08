@@ -5,7 +5,6 @@ const copyDir = async (src, dest) => {
   try {
     await fs.rm(dest,  { recursive: true });
   } catch(err) {
-    console.log(err);
   } finally {
     await fs.mkdir(dest, {recursive: true});
     const dirents = await fs.readdir(src, {withFileTypes: true});
